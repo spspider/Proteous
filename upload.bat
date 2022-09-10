@@ -1,5 +1,3 @@
-cd /d
-cd "/d/My Documents/Programming/Proteous/"
 git init
 git add .
 git commit -m "first commit"
