@@ -1,0 +1,6 @@
+# Writing all output to: D:\My Documents\Programming\Proteus\ESP\ESP8266\esp_base_project\esp_external_one_engine.log
+set pad_wire_necking on
+bus diagonal
+fanout 5
+route 50
+Process stopped!

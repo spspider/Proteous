@@ -1,0 +1,38 @@
+F.A.Q. for SBWorkshop.
+
+
+1. Q. Do I have to unsolder EEPROM chip when I want to reset it or I can leave it on board and connect the wires?
+   A. Yes. It is not necessary to unsolder the chip but in some cases you need to unsolder write protection pin of the chip.
+      For example pin 7 on 24C02 EEPROM. However some PSBs require complet unsoldering the chip.
+
+2. Q. How can I read the battery data?
+   A. You need to connect SCL, SDA and GND pins of adapter to SCL, SDA and GND pins of the battery whith any suitable wires. 
+      Then press "Read" button. Cells must be connected and battery must be initialized if you just assemble it
+      (in some cases). To initialize the battery you need just to apply power to "+" and "-" battery terminals from any
+      DC power source (about 9V).
+
+3. Q. Where are the SCL, SDA and GND pins on my battery?
+   A. Different batteries have different terminal pinouts so the only way is to try different combinations.
+      Connect GND pin of adapter to GND terminal of your battery then try different combinations of connecting SCL
+      and SDA pins. SCL and SDA pins are always next to each other. It will take no more then 5 minutes. 
+      You need just not to connect battery "+" terminal to adapter. All other combinations are safe. 
+      But you have to remember that not all the batteries are SMBus batteries.
+
+4. Q. "I have no Visa or Master Card" or "I live in <some country>" how can I pay for the program?
+   A. All the payments are made via Share-It Payment Processing System (Germany) so all the questions should be
+      addressed them. Click "Customers Care Center" link on our site or write them a letter with your question.
+      http://shareit.com 
+
+5. Q. What is chipset?
+   A. Chipset is a combination of microcontroller chip and EEPROM chip. E.g. M37515 and SL220. 
+
+6. Q. Can I use my notebook/desktop internal power source to power up the adapter?
+   A. Yes. You can connect USB power wire (red) to +5V terminal of adapter. You need just one wire. No need to connect GND 
+      as it's connected via internal PC circuits. 
+
+7. Q. How to buy the software?
+   A. Go to http://www.shareit.com/product.html?productid=300006915&stylefrom=300006915&noquickbuy=1&pc=3xp05
+      Press "Add to cart" then "Proceed to Checkout".
+      During the ordering process you will be promted for your HDD_ID. So you need to save Smart Battery Data Report
+      using demo version (no need to connect the adapter just press "Save" button) and find your HDD_ID in its header.
+      We recommend you to use Copy/Paste functions instead of typing HDD_ID to avoid mistakes. 

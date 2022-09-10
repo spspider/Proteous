@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0080)http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru-RU-lite"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/cb=gapi.loaded_1" async=""></script><script src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/cb=gapi.loaded_0" async=""></script>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+
+
+<title>Управление тиристорами в схемах на микроконтроллере | Техника и Программы</title>
+
+<link rel="stylesheet" href="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/style.css" type="text/css" media="all">
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://nauchebe.net/wp-content/themes/cgp2mod/ie6.css" type="text/css" />
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Техника и Программы RSS Feed" href="http://nauchebe.net/feed/">
+<link rel="alternate" type="application/atom+xml" title="Техника и Программы Atom Feed" href="http://nauchebe.net/feed/atom/">
+<link rel="shortcut icon" href="http://nauchebe.net/wp-content/themes/cgp2mod/favicon.ico" type="image/x-icon">
+
+
+<!-- All in One SEO Pack 2.2.5.1 by Michael Torbert of Semper Fi Web Design[364,371] -->
+<meta name="description" itemprop="description" content="Тиристором называется четырёхслойный полупроводниковый прибор, состоящий из последовательно чередующихся областей p- и «-типов проводимости. До 1979 г.">
+
+<meta name="keywords" itemprop="keywords" content="напряжение,напряжения,питания,тиристора,тиристоров,тиристоры,управления,Микроконтроллеры">
+
+<link rel="canonical" href="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/Управление тиристорами в схемах на микроконтроллере   Техника и Программы.html">
+<!-- /all in one seo pack -->
+<link rel="stylesheet" id="vs-style-css" href="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/vsstyle.css" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox-css" href="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/jquery.fancybox-1.3.7.min.css" type="text/css" media="screen">
+<link rel="prev" title="Стробирование светодиодов на MK" href="http://nauchebe.net/2014/02/strobirovanie-svetodiodov-na-mk/">
+<link rel="next" title="Радиолампы Одесского радиозавода" href="http://nauchebe.net/2014/02/radiolampy-odesskogo-radiozavoda/">
+<link rel="shortlink" href="http://nauchebe.net/?p=29177">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Управление тиристорами в схемах на микроконтроллере">
+<meta property="og:url" content="http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/">
+<meta property="og:description" content="Тиристором называется четырёхслойный полупроводниковый прибор, состоящий из последовательно чередующихся областей p- и «-типов проводимости. До 1979 г. тиристоры называли тринисторами. С появлением ГОСТ 20859.1-79, а затем ГОСТ 20859.1-98 классификация изменилась следующим образом: •                 триодные тиристоры или, сокращённо, тиристоры; •                 тиристоры-диоды (тиристоры с встроенным обратным диодом); •                 лавинные, асимметричные, запираемые тиристоры; •                 комбинированно-выключаемые тиристоры; •                 симметричные […]">
+<link rel="stylesheet" href="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/wp-page-numbers.css" type="text/css" media="screen">
+<!-- Easy FancyBox 1.5.7 using FancyBox 1.3.7 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
+<script type="text/javascript" async="" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/widgets.js"></script><script type="text/javascript" async="" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/watch.js"></script><script id="facebook-jssdk" async="" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/all.js"></script><script type="text/javascript" async="" src="http://ad.admitad.com/shuffle/ebd28cf5bd/?inject_to=admitad_shuffle60100336"></script><script type="text/javascript" async="" src="http://ad.admitad.com/shuffle/ebd28cf5bd/?inject_to=admitad_shuffle48314156"></script><script type="text/javascript">
+/* <![CDATA[ */
+var fb_timeout = null;
+var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : false };
+var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nofancybox,.pin-it-button), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox,.pin-it-button), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox,.pin-it-button), area[href*=".png"]:not(.nofancybox)';
+	jQuery(fb_IMG_select).addClass('fancybox image');
+	var fb_IMG_sections = jQuery('div.gallery');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : true, 'titleShow' : false, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* YouTube */
+	jQuery('a[href*="youtube.com/watch"]:not(.nofancybox), area[href*="youtube.com/watch"]:not(.nofancybox)').addClass('fancybox-youtube');
+	jQuery('a[href*="youtu.be/"]:not(.nofancybox), area[href*="youtu.be/"]:not(.nofancybox)').addClass('fancybox-youtube');
+	jQuery('a.fancybox-youtube, area.fancybox-youtube, li.fancybox-youtube a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'type' : 'iframe', 'width' : 640, 'height' : 360, 'titleShow' : false, 'titlePosition' : 'float', 'titleFromAlt' : true, 'onStart' : function(selectedArray, selectedIndex, selectedOpts) { selectedOpts.href = selectedArray[selectedIndex].href.replace(new RegExp('youtu.be', 'i'), 'www.youtube.com/embed').replace(new RegExp('watch\\?(.*)v=([a-z0-9\_\-]+)(&amp;|&|\\?)?(.*)', 'i'), 'embed/$2?$1$4'); var splitOn = selectedOpts.href.indexOf('?'); var urlParms = ( splitOn > -1 ) ? selectedOpts.href.substring(splitOn) : ""; selectedOpts.allowfullscreen = ( urlParms.indexOf('fs=0') > -1 ) ? false : true } }) );
+	/* Auto-click */ 
+	jQuery('#fancybox-auto').trigger('click');
+}
+/* ]]> */
+</script>
+
+<style type="text/css">
+#fancybox-content{background-color:#fff}
+#fancybox-content{border-color:#fff}#fancybox-outer{background-color:#fff}
+#fancybox-content{color:inherit}
+</style>
+<script type="text/javascript" async="" src="http://s1.rotaban.ru/rotaban.js?v=1425333600000"></script><script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/api.js"></script><style type="text/css">#flash-transport-container {height: 0; font-size: 0;}.mrc__translayer {filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70); -moz-opacity: 0.7; -khtml-opacity: 0.7; opacity: 0.7; background: #FFF url(//img6.imgsmail.ru/r/my/preloader_circle_32.gif) no-repeat center center; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 999999; display: none}
+.mrc__translayer_on iframe {visibility: hidden;}.mrc__translayer_on {background-image:none;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body id="home" data-twttr-rendered="true">
+<script type="text/javascript">
+(function(){
+    var rb = document.createElement('script');
+        d = new Date();
+    d.setHours(0);
+    d.setMinutes(0);
+    d.setSeconds(0);
+    d.setMilliseconds(0);
+    rb.type = 'text/javascript';
+    rb.async = true;
+    rb.src = '//s1.rotaban.ru/rotaban.js?v=' + d.getTime();
+    (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(rb);
+})();
+</script>
+<div id="header" class="clearfix">
+	<ul id="accessibility"><noindex>
+		<li><a href="http://nauchebe.net/" title="Вернуться на главную">В начало</a></li>
+		<li><a href="http://nauchebe.net/feed/">RSS</a></li>
+						<li><a href="http://nauchebe.net/wp-login.php">Log in</a></li>
+<li class="last-item"><a href="http://nauchebe.net/pravoobladatelyam/">Правообладателям</a></li>	
+</noindex>
+	</ul>
+	<div id="branding">
+		<h1 id="logo"><a href="http://nauchebe.net/" title="Техника и Программы">Техника и Программы</a></h1><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I6_1425405538781" name="I6_1425405538781" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/fastbutton(1).html" data-gapiattached="true" title="+1"></iframe></div>
+		<div class="description">
+    </div>
+	</div>
+	<div id="nav" class="clearfix">
+		<div id="nav-search">
+<form action="http://www.google.ru/" id="cse-search-box" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2752413462721109:1255205877">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" size="33" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(http://www.google.ru/cse/intl/ru/images/google_custom_search_watermark.gif) 0% 50% no-repeat rgb(255, 255, 255);">
+    <input type="submit" name="sa" value="Поиск">
+  </div>
+<input name="siteurl" type="hidden" value="nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/"><input name="ref" type="hidden" value="www.google.com.ua/imgres?imgurl=http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image245.jpg&amp;imgrefurl=http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/&amp;h=274&amp;w=635&amp;tbnid=uuWnnpYrHo6U3M:&amp;zoom=1&amp;docid=9mkpSg63dXql7M&amp;ei=V_X1VKSpKuP4ywP50YLwDw&amp;tbm=isch&amp;ved=0CB8QMygEMAQ"><input name="ss" type="hidden" value=""></form>
+
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/brand"></script>
+			
+		</div>
+		<ul id="menu">
+  		<li class="page-item-home "><a href="http://nauchebe.net/">Главная</a></li>
+<li><a href="http://nauchebe.net/rubriki-categ/">Рубрики</a></li>
+
+		</ul>
+    <div id="submenu-bg">    
+ <div style="width:100%;">
+<div style="float: left;padding: 5px 8px;width:100%;">
+<div id="rotaban_235204" class="rbrocks rotaban_ad27146c631f4d17b2232031105c41e3"></div>
+</div>
+
+
+</div>    </div>
+	</div>
+</div>
+<div id="main" class="clearfix">
+	<div id="container">
+		<div id="content">
+
+	  <div class="browse">
+<!-- RDFa Breadcrumbs Plugin by Mallikarjun Yawalkar --><div class="breadcrumb breadcrumbs"><div class="rdfa-breadcrumb"><div xmlns:v="http://rdf.data-vocabulary.org/#"><p><span class="breadcrumbs-title"> </span><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://nauchebe.net/" class="home">Главная</a></span> <span class="separator">»</span> <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://nauchebe.net/category/radioelektronika/" title="Радиоэлектроника">Радиоэлектроника</a></span> <span class="separator">»</span> <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://nauchebe.net/category/radioelektronika/mikrokontrollery/" title="Микроконтроллеры">Микроконтроллеры</a></span> <span class="separator">»</span> Управление тиристорами в схемах на микроконтроллере</p></div></div></div><!-- RDFa Breadcrumbs Plugin by Mallikarjun Yawalkar -->  </div>
+		<div class="post-29177 post type-post status-publish format-standard hentry category-mikrokontrollery tag-napryazhenie tag-napryazheniya tag-pitaniya tag-tiristora tag-tiristorov tag-tiristory tag-upravleniya" id="post-29177">
+			<h1>Управление тиристорами в схемах на микроконтроллере</h1><div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I7_1425405538799" name="I7_1425405538799" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/fastbutton(2).html" data-gapiattached="true" title="+1"></iframe></div>
+			<small class="meta">
+  			<span class="alignleft">
+          February 8, 2014 by admin            			</span>
+        <a href="http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/#comments" class="alignright button-style" rel="nofollow">Комментировать »</a>
+      </small>
+
+			<div class="entry">
+
+<div class="adcontent">
+<script type="text/javascript">(function() {
+  /* Optional settings (these lines can be removed): */ 
+   subID = "";  // - local banner key;
+   injectTo = "";  // - #id of html element (ex., "top-banner").
+  /* End settings block */ 
+
+if(injectTo=="")injectTo="admitad_shuffle"+subID+Math.round(Math.random()*100000000);
+if(subID=='')subid_block=''; else subid_block='subid/'+subID+'/';
+document.write('<div id="'+injectTo+'"></div>');
+var s = document.createElement('script');
+s.type = 'text/javascript'; s.async = true;
+s.src = 'http://ad.admitad.com/shuffle/ebd28cf5bd/'+subid_block+'?inject_to='+injectTo;
+var x = document.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+})();</script><div id="admitad_shuffle48314156"></div>
+</div>
+				<p>Тиристором называется четырёхслойный полупроводниковый прибор, состоящий из последовательно чередующихся областей p- и «-типов проводимости. До 1979 г. тиристоры называли тринисторами. С появлением ГОСТ 20859.1-79, а затем ГОСТ 20859.1-98 классификация изменилась следующим образом:</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;триодные тиристоры или, сокращённо, тиристоры;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;тиристоры-диоды (тиристоры с встроенным обратным диодом);</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;лавинные, асимметричные, запираемые тиристоры;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;комбинированно-выключаемые тиристоры;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;симметричные триодные тиристоры или, по-другому, симисторы, триаки;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;фототиристоры, оптотиристоры, оптосимисторы.</p>
+<p>Три вывода тиристора обозначают буквами: «А» (анод, Anode), «К» или «С» (катод, Cathode), «УЭ» или «G» (управляющий электрод или Gate — затвор).</p>
+<p>Мощность нагрузки, подключаемой к аноду/катоду тиристора во много раз превышает мощность сигнала управления. Важной особенностью тиристора является то, что будучи однажды открыт, он находится в таком состоянии постоянно, вплоть до полного снятия питания. Следовательно, для управления тиристором можно использовать короткие импульсы.</p>
+<p>В зависимости от слоя полупроводника, с которым внутри соединяется вывод УЭ, тиристоры бывают с управлением по катоду (Рис. 2.102, а, встречаются чаще) и с управлением по аноду (Рис. 2.102, б, встречаются реже).</p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image242.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image242-min-vs.jpg" alt=""></a></p>
+<p>Рис. 2.102. Условные графические обозначения тиристоров: а) с управлением по катоду; б) с управлением по аноду.</p>
+<p>Среди множества электрических параметров тиристоров интерес, с точки зрения сопряжения с MK, представляют следующие:</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;ток отпирания УЭ /<sub>уэ</sub> (десятки-сотни миллиампер);</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;максимальное напряжение УЭ &nbsp;<sub>уэ</sub>(единицы-десятки вольт);</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Длительность импульса включения Т<sub>вкл</sub>(микросекунды).</p>
+<p>Типовые параметры тиристоров семейства КУ221: /<sub>уэ</sub> = 0.15 А; б эмлх = 7 В; Гвкл <sub>MIN</sub> = 2 МК с (в реальных схемах устанавливают 50 МК с…Ю мс); частота повторения импульсов на входе УЭ должна быть не более 30 кГц. Остальные параметры относятся к силовой части. Они зависят от мощности/напряжения в нагрузке и должны выбираться отдельно, без привязки к схемотехнике MK.</p>
+<p>Для обеспечения долговременной надёжности работы тиристоров следует придерживаться свода простых правил:</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;импульс УЭ должен иметь запас по току относительно минимально допустимого, иначе может произойти локальный пробой стуктуры слабым током помехи и выход тиристора из строя [2-187];</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;рабочие напряжения и токи в силовой части надо выбирать с коэффициентом запаса 0.7…0.8 от максимально допустимых по даташиту;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;электрические параметры входа УЭ имеют значительный технологический разброс, поэтому расчёты элементов надо вести на худший случай. Тем не менее, некоторые экземпляры тиристоров могут включаться и при пониженных (по сравнению с даташитом) токах, напряжениях, чем часто пользуются радиолюбители в своих конструкциях;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;для повышения помехоустойчивости между катодом и УЭ рекомендуется ставить резистор сопротивлением 51… 1000 Ом. Другое решение — обеспечить низкий выходной импеданс генератора управляющих импульсов;</p>
+<p>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;следует создавать комфортный температурный режим для тиристора с применением радиаторов и теплопроводящих паст, например, КТП-8.</p>
+<p>При коммутации нагрузки в цепи 220 В управляющие импульсы желательно синхронизировать с моментами перехода сетевого напряжения через нуль. Такой приём резко снижает уровень ВЧ-помех, «засоряющих» эфир. Для плавного изменения напряжения в нагрузке применяют фаз число-импульсное управление, при этом не имеет значение, как подключаются тиристоры к MK: без развязки от сети 220 В (Рис. 2.103, а…ж) или с гальванической изоляцией (Рис. 2.104, а…н).</p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image243.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image243-min-vs.jpg" alt=""></a></p>
+<p>а) импульсами с выхода MK периодически открывается транзистор K77, а через него и тиристор VS1. От частоты следования импульсов будет изменяться среднее напряжение в нагрузке R<sub>H</sub>. Необязательный конденсатор C7 уменьшает ВЧ-помехи в момент коммутации;</p>
+<p>б) аналогично Рис. 2.103, а, но максимально упрощённо. Тем не менее, реально работает;</p>
+<p>в) тиристор VS1 питается постоянным, а не пульсирующим напряжением, поэтому включается он положительным импульсом с выхода MK, а выключается полным снятием напряжения питания +9…+ 18 В;</p>
+<p>г) аналогично Рис. 2.103, в, но без транзистора и с выключением тиристора VS1 нажатием кнопки SB1. Резистором R1 устанавливается ток управления не более 15 мА. Падение напряжения на тиристоре в открытом состоянии составляет 0.6…1.5 В. Контакты кнопки SB1 должны выдерживать максимальный ток, на который рассчитана нагрузка R<sub>H</sub>\</p>
+<p>д) микросхема DD1 имеет выход с открытым коллектором и служит ключом, открывающим тиристор VS1. Резистором R1 задаётся ток управления, но его может не хватить для конкретного тиристора из-за низкого напряжения питания +5 В (проверяется экспериментально); </p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image244.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image244-min-vs.jpg" alt=""></a></p>
+<p>&nbsp;Рис. 2.103. Схемы подключения тиристоров к МК &nbsp;без гальванической изоляции (окончание):</p>
+<p>е) классическое включение шунтирующего резистора R3 между входом УЭ и катодом тиристора VSI. Напряжение питания +5 В для MK может быть получено от +9 В через стабилизатор;</p>
+<p>ж) на вход УЭ тиристора VS1 через резистор R3 подаётся повышенное до+12 В напряжение, чтобы обеспечить гарантированное отпирание. В некоторых случаях, подбирая тип тиристора VS1, можно добиться его включения при пониженном напряжении +5 В. Необязательный конденсатор С/ несколько замедляет скорость нарастания управляющего тока (при этом увеличиваются потери мощности), но он защищает тиристор VS1 от ложных срабатываний.</p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image245.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image245-min-vs.jpg" alt=""></a></p>
+<p>Рис. 2.104. Схемы гальванической изоляции MK от тиристоров (начало):</p>
+<p>а) гальваническая развязка через оптопару VU1. Тиристор VS1 подаёт напряжение в нагрузку R<sub>н</sub> только во время одного полупериода сетевого напряжения 220 В. В другой полупериод нагрузка обесточена, поскольку закрыт диод VD2. Стабилитрон VD1 задаёт оптимальное напряжение на входе УЭ тиристора VS1. Резистор R2ограничивает ток управления;</p>
+<p>б) аналогично Рис. 2.104, а, но с другой полярностью импульсов от MK, с дополнительным резистором R2, с конденсатором фильтра C1 и с другим стабилитроном VD1\ </p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image246.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image246-min-vs.jpg" alt=""></a></p>
+<p>в) на обоих выходах МК &nbsp;должны синхронно выставляться НИЗКИЕ и ВЫСОКИЕ уровни. Резисторы R1, &amp;2 — токоограничивающие. Резистор R4 повышает помехоустойчивость;</p>
+<p>г) гальваническая развязка на трансформаторе T1. Каждый из тиристоров VS1, VS2 открывается в свою полуволну сетевого напряжения импульсами с выхода МК &nbsp;длительностью 10 МК с и периодом 0.7…1 мс. Для питания транзистора VT1 применяется отдельный источник +5 B(2), чтобы помехи не нарушали работу MK. Трансформатор T1 наматывается на кольце из феррита 79HM K25xl5x5, в обмотке I — 40 витков, в обмотках II, III — по 80 витков провода ПЭВ-0.25;</p>
+<p>д) MK формирует импульсы частотой 100 Гц и длительностью 12 МК с, которые постепенно за 3 с смещаются с конца полупериода сетевой синусоиды к ее началу. Как следствие, оптосимтор VU1 «малыми шажками» переходит в полностью открытое состояние, организуя плавный заряд ёмкости высоковольтного конденсатора C3. Дроссель L1 наматывается на кольце из феррита M2000HM1 K31xl8.5×7 и содержит две обмотки по 25 витков провода ПЭВ-1.0 в каждой;</p>
+<p>е) коммутация нагрузки R<sub>H</sub> при помощи тиристора VS1 и изолированного оптореле VU1\ </p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image247.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image247-min-vs.jpg" alt=""></a></p>
+<p>ж) гальваническая развязка MK выполнена на оптопаре VU1. Трансформатор T1 служит не для изоляции (нагрузка R<sub>H</sub> и так связана с сетью 220 В), а для отпирания тиристора VS1 повышенным напряжением +9…+12 В при токе до 0.15 А. Экономически такое решение оправдано при многоканальной системе с большим числом тиристоров и одним трансформатором;</p>
+<p>з) VU1 — сдвоенный опто тиристорный модуль фирмы «Элемент-Преобразователь». Линии МК &nbsp;запараллелены для повышения мощности. Замена VU1 — два оптотиристора ТО 125-10-6;</p>
+<p>и) гальваническая развязка на оптосимисторе VU1. Тиристоры VS1, К£2соединены противонаправленно. Каждый из них открывается в «свой» полупериод сетевого напряжения;</p>
+<p>к) тиристор оптопары VU1 замыкает диагональ диодного моста VD1, чтобы коммутировать нагрузку R<sub>H</sub> в оба полупериода сетевого напряжения. Ток через нагрузку не более 100 мА;</p>
+<p>л) аналогично Рис. 2.104, к, но с другой полярностью импульсов и другими типами ЭРИ; </p>
+<p><a href="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image248.jpg" class="fancybox image"> <img border="1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/MicroControllerCircuitsVS_image248-min-vs.jpg" alt=""></a></p>
+<p>&nbsp;Рис. 2.104. Схемы гальванической изоляции МК от тиристоров (окончание):</p>
+<p>м) стробоскоп с опторазвязкой. Тиристор VS1 через повышающий трансформатор T1 [2-196] периодически поджигаетлампу EL1. Светодиод HL1 индицирует вспышки стробоскопа;</p>
+<p>н) маркировка на корпусе оптотиристоров VU1, Г772содержит буквы и символы вместо привычных арабских цифр. Мощность в нагрузке R<sub>H</sub> не более 100 Вт.</p>
+<p>Источник: Рюмик, С. М., 1000 и одна микроконтроллерная схема. Вып. 2 / С. М. Рюмик. — М.:ЛР Додэка-ХХ1, 2011. — 400 с.: ил. + CD. — (Серия «Программируемые системы»). </p>
+
+<div class="adcontentcen">
+<script type="text/javascript">(function() {
+  /* Optional settings (these lines can be removed): */ 
+   subID = "";  // - local banner key;
+   injectTo = "";  // - #id of html element (ex., "top-banner").
+  /* End settings block */ 
+
+if(injectTo=="")injectTo="admitad_shuffle"+subID+Math.round(Math.random()*100000000);
+if(subID=='')subid_block=''; else subid_block='subid/'+subID+'/';
+document.write('<div id="'+injectTo+'"></div>');
+var s = document.createElement('script');
+s.type = 'text/javascript'; s.async = true;
+s.src = 'http://ad.admitad.com/shuffle/ebd28cf5bd/'+subid_block+'?inject_to='+injectTo;
+var x = document.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+})();</script><div id="admitad_shuffle60100336"></div>
+</div>
+
+				
+<div class="share3">
+<div class="conteiner">
+<div id="___plusone_2" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I8_1425405538814" name="I8_1425405538814" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/tweet_button.26f01cfa05bff9af89657dcbd8f7b705.en.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 108px; height: 20px;"></iframe>
+
+<span style="position: relative; left: 0; top: 0; margin: 0; padding: 0; visibility: visible;"><iframe frameborder="0" scrolling="no" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/share_button.html" allowtransparency="true" name="undefined" id="1664598" style="height: 21px; width: 220px; border: 0px solid rgb(255, 255, 0); background-color: transparent;"></iframe></span><a target="_blank" class="mrc__plugin_uber_like_button" href="http://connect.mail.ru/share" data-mrc-config="{&#39;type&#39; : &#39;button&#39;, &#39;caption-mm&#39; : &#39;1&#39;, &#39;caption-ok&#39; : &#39;1&#39;, &#39;counter&#39; : &#39;true&#39;, &#39;text&#39; : &#39;true&#39;, &#39;width&#39; : &#39;220px&#39;}" type="uber_like_button" style="display: none;">Нравится</a>
+<script src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/loader.js" type="text/javascript" charset="UTF-8"></script>
+</div>
+<div class="conteiner">
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/openapi.js"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 2459801, onlyWidgets: true});
+</script>
+
+<!-- Put this div tag to the place, where the Like block will be -->
+<div id="vk_like" style="height: 22px; width: 180px; position: relative; clear: both; background: none;"><iframe name="fXD3a6ed" frameborder="0" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/widget_like.html" width="100%" height="22" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 22px; width: 180px; z-index: 150;"></iframe></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "button", verb: 1});
+</script>
+</div>
+<div class="conteiner">
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/rFG58m7xAig.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/rFG58m7xAig(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async=true; js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like fb_iframe_widget" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fnauchebe.net%2F2014%2F02%2Fupravlenie-tiristorami-v-sxemax-na-mikrokontrollere%2F&amp;layout=button_count&amp;locale=ru_RU&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=250"><span style="vertical-align: bottom; width: 186px; height: 20px;"><iframe name="f15c5ac938" width="250px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/like.html" style="border: none; visibility: visible; width: 186px; height: 20px;" class=""></iframe></span></div>
+</div>
+
+
+</div>
+
+
+      	<ul class="previousnext clearfix">
+      		<li class="previous_post"><a href="http://nauchebe.net/2014/02/strobirovanie-svetodiodov-na-mk/" rel="prev"><span>Предыдущая запись:</span> Стробирование светодиодов на MK</a></li>      		<li class="next_post"><a href="http://nauchebe.net/2014/02/radiolampy-odesskogo-radiozavoda/" rel="next"><span>Следующая запись:</span> Радиолампы Одесского радиозавода</a></li>			<h4>Похожие посты:</h4><ul><li><a href="http://nauchebe.net/2010/06/chem-otlichaetsya-tok-ot-napryazheniya/" title="Чем отличается ток от напряжения?">Чем отличается ток от напряжения?</a> (0)</li><li><a href="http://nauchebe.net/2010/06/svyaz-toka-i-napryazheniya/" title="Связь тока и напряжения">Связь тока и напряжения</a> (0)</li><li><a href="http://nauchebe.net/2010/09/istochnik-pitaniya-dlya-avtomobilnogo-radiopriemnika/" title="ИСТОЧНИК ПИТАНИЯ ДЛЯ АВТОМОБИЛЬНОГО РАДИОПРИЕМНИКА">ИСТОЧНИК ПИТАНИЯ ДЛЯ АВТОМОБИЛЬНОГО РАДИОПРИЕМНИКА</a> (0)</li><li><a href="http://nauchebe.net/2010/09/ustrojstvo-elektricheskoj-razvyazki-akkumulyatorov/" title="УСТРОЙСТВО ЭЛЕКТРИЧЕСКОЙ РАЗВЯЗКИ АККУМУЛЯТОРОВ">УСТРОЙСТВО ЭЛЕКТРИЧЕСКОЙ РАЗВЯЗКИ АККУМУЛЯТОРОВ</a> (0)</li><li><a href="http://nauchebe.net/2010/10/zaryadnoe-ustrojstvo-dlya-akkumulyatora/" title="ЗАРЯДНОЕ УСТРОЙСТВО ДЛЯ АККУМУЛЯТОРА">ЗАРЯДНОЕ УСТРОЙСТВО ДЛЯ АККУМУЛЯТОРА</a> (0)</li><li><a href="http://nauchebe.net/2010/10/zaryadnoe-ustrojstvo-dlya-litij-nonnogo-elementa-kontroller-zaryadnogo-ustrojstva/" title="ЗАРЯДНОЕ УСТРОЙСТВО ДЛЯ ЛИТИЙ-НОННОГО ЭЛЕМЕНТА КОНТРОЛЛЕР ЗАРЯДНОГО УСТРОЙСТВА">ЗАРЯДНОЕ УСТРОЙСТВО ДЛЯ ЛИТИЙ-НОННОГО ЭЛЕМЕНТА КОНТРОЛЛЕР ЗАРЯДНОГО УСТРОЙСТВА</a> (0)</li><li><a href="http://nauchebe.net/2010/10/ogranichitel-zaryadnogo-toka-akkumulyatora/" title="ОГРАНИЧИТЕЛЬ ЗАРЯДНОГО TOKA АККУМУЛЯТОРА">ОГРАНИЧИТЕЛЬ ЗАРЯДНОГО TOKA АККУМУЛЯТОРА</a> (0)</li></ul>      	</ul>
+			</div>
+			
+			<div class="postmetadata">
+			  <p class="categories">
+			    В рубрике <a href="http://nauchebe.net/category/radioelektronika/mikrokontrollery/" rel="category tag">Микроконтроллеры</a>        </p>
+  			<p class="tags">Метки: <a href="http://nauchebe.net/tag/napryazhenie/" rel="tag">напряжение</a> <a href="http://nauchebe.net/tag/napryazheniya/" rel="tag">напряжения</a> <a href="http://nauchebe.net/tag/pitaniya/" rel="tag">питания</a> <a href="http://nauchebe.net/tag/tiristora/" rel="tag">тиристора</a> <a href="http://nauchebe.net/tag/tiristorov/" rel="tag">тиристоров</a> <a href="http://nauchebe.net/tag/tiristory/" rel="tag">тиристоры</a> <a href="http://nauchebe.net/tag/upravleniya/" rel="tag">управления</a></p>        <p class="infos">
+						Вы можете подписаться на новые комментарии к этой записи по <a href="http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/feed/" rel="nofollow">RSS 2.0 Feed</a>. 
+
+													Вы можете оставить комментарий к записе. Возможность оставить trackback со своего сайта отсутствует.
+											</p>
+				</div>
+
+      <div class="something">
+<div style="text-align:center;">
+<div id="rotaban_196355" class="rbrocks rotaban_ad27146c631f4d17b2232031105c41e3"></div>
+</div></div>
+		</div>
+
+  	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+
+  <div id="respond">
+    <h3>Оставить комментарий</h3>
+    <div class="cancel-comment-reply">
+    	    	<a rel="nofollow" id="cancel-comment-reply-link" href="http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/#respond" style="display:none;">Нажмите сюда для отмены комментария.</a>    	
+    </div>
+  
+    
+  <form action="http://nauchebe.net/wp-comments-post.php" method="post" id="commentform">
+  
+    
+  <div class="respond-left">
+    <p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true">
+    <label for="author">Имя (required)</label></p>
+    
+    <p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required="true">
+    <label for="email">Почта (не публикуется) (required)</label></p>
+    
+    <p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+    <label for="url">Сайт</label></p>
+
+  </div>
+ 
+    
+  <!--<p><small><strong>XHTML:</strong> Разрешенные тэги: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+  
+  <div class="respond-right">
+    <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+  <p>
+
+        <input name="submit" type="submit" id="submit" tabindex="5" value="Отправить">
+    <input type="hidden" name="comment_post_ID" value="29177" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+    </p>
+    <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7e6192a78d"></p><p style="display: none;"></p>  </div>
+  
+  <input type="hidden" id="ak_js" name="ak_js" value="1425405292657"></form>
+  
+    </div>
+
+  	 
+
+	
+		</div><!-- #content -->
+	</div><!-- #container -->
+<div id="sidebar">
+
+
+<noindex>
+			<div class="section">
+				<div class="box visible">
+	      	<a id="rss" href="http://nauchebe.net/feed/" target="_blank" title="RSS">RSS</a>
+	      	<ul class="subscribes" id="vsnoborder">
+<li><a id="rss2" href="http://nauchebe.net/feed/" target="_blank">← <strong>RSS блога</strong></a></li>
+<li><a href="http://fusion.google.com/add?feedurl=http://nauchebe.net/feed/" target="_blank" rel="nofollow">Читать через Google</a></li>
+<li><a href="http://lenta.yandex.ru/settings.xml?name=feed&url=http://nauchebe.net/feed/" target="_blank" rel="nofollow">Читать через Яндекс</a></li>
+<li><a href="http://feeds.feedburner.com/nauchebe/OlsC" target="_blank" rel="nofollow">Читать через FeedBurner</a></li>
+					<form id="rss2mail" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=nauchebe/OlsC&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+						<label>E-mail рассылка</label>
+						<input type="email" name="email" value="" class="rss2mail" placeholder="Ваш e-mail">
+						<input type="hidden" value="nauchebe/OlsC" name="uri">
+						<input type="hidden" name="loc" value="ru_RU">
+						<button type="submit" class="go">ok</button>
+					</form>
+<div class="clear"></div>
+<li><a id="twitter2" href="http://twitter.com/NauchebeNet" target="_blank">← <strong>Мой Twitter</strong></a></li>
+<div class="clear"></div>
+<li><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/follow_button.10495f50328f320357081ee891e346f2.ru.html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 181px; height: 28px;"></iframe></li>
+
+<div id="vsfeedcount"> <a href="http://feeds.feedburner.com/nauchebe/OlsC"><img src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/OlsC" height="26" width="88" style="border:0" alt=""></a></div>
+
+<div id="vstwittercount"> 
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/00ACED"></script><div id="TwitterCounter"><a href="http://twittercounter.com/NauchebeNet?utm_source=referring%2Bsites&utm_medium=organic%2Blinks&utm_campaign=twittercounter%2Bbutton" title="Twitter Counter for @NauchebeNet" target="_blank"><img src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/00ACED(1)" width="88" height="26" style="border:none;" alt="На учебе.NET has 51 followers on Twitter"></a></div><noscript>&lt;a href="http://twittercounter.com/NauchebeNet"&gt;На учебе.NET on Twitter Counter&lt;/a&gt;</noscript>
+<div> 
+	      	</div></div></ul>
+
+
+
+	      	<div class="clear"></div>
+				</div>
+				
+			</div>
+
+</noindex>
+
+
+
+<li id="about" class="clearfix">
+</li>
+  <div class="sb-title">         
+  </div>
+
+
+
+<div class="something">
+  <div class="sb-title">Популярное:</div>
+<ul>
+  	<li>
+<!-- 2015-03-01 16:02:37 -->
+<p><a href="http://nauchebe.net/2012/01/vvedenie-v-yazyk-programmirovaniya-arduino/">Введение в язык программирования Arduino (14)</a></p>
+<p><a href="http://nauchebe.net/2010/09/analogi-i-zamena-zarubezhnyx-diodov-i-poluprovodnikov/">Аналоги и замена зарубежных диодов и полупроводников (17)</a></p>
+<p><a href="http://nauchebe.net/2010/12/stereofonicheskij-tembroblok/">ПРОСТОЙ СТЕРЕОФОНИЧЕСКИЙ ТЕМБРОБЛОК (13)</a></p>
+<p><a href="http://nauchebe.net/2011/04/temperaturnye-datchiki-termorezistory-v-sxemax-na-mk/">Температурные датчики. Терморезисторы в схемах на МК (15)</a></p>
+<p><a href="http://nauchebe.net/2010/06/generatory-vysokogo-napryazheniya-s-emkostnymi-nakopitelyami-energii/">Генераторы высокого напряжения с емкостными накопителями энергии (13)</a></p>
+<p><a href="http://nauchebe.net/2011/03/televizionnaya-polskaya-antenna/">Телевизионная ”польская” антенна (25)</a></p>
+<p><a href="http://nauchebe.net/2010/10/osnovnye-sxemy-impulsnyx-setevyx-adapterov-dlya-zaryadki-telefonov/">Основные схемы импульсных сетевых адаптеров для зарядки телефонов (18)</a></p>
+<p><a href="http://nauchebe.net/2012/09/tranzistory-kt819-i-kt818-a-g-am-gm-xarakteristiki-cokolevka-datasheet/">Транзисторы КТ819 и  КТ818 (А-Г, АМ…ГМ) характеристики, цоколевка (datasheet) (21)</a></p>
+<p><a href="http://nauchebe.net/2012/08/tranzistory-osnovnye-parametry-i-xarakteristiki-markirovka/">Транзисторы – основные параметры и характеристики, маркировка (17)</a></p>
+<p><a href="http://nauchebe.net/2012/09/kak-chitat-sxemy-radioelektronnyx-ustrojstv-oboznacheniya-radiodetalej/">Как читать схемы радиоэлектронных устройств, обозначения радиодеталей (24)</a></p>
+<!-- 2015-03-01 16:02:37 -->	</li>
+</ul>
+</div>
+
+
+
+<div class="something">
+<noindex>
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/openapi.js"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 2459801, onlyWidgets: true});
+</script>
+
+<!-- Put this div tag to the place, where the Like block will be -->
+<div id="vk_recommended" style="height: 430px; width: 100%; background: none;"><iframe name="fXD5f38a" frameborder="0" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/widget_recommended.html" width="100%" height="300" scrolling="no" id="vkwidget2" style="overflow: hidden; height: 430px;"></iframe></div>
+<script type="text/javascript">
+VK.Widgets.Recommended("vk_recommended", {limit: 7, period: 'month'});
+</script>
+</noindex>
+</div>
+<div class="something">
+  <div class="sb-title">Последние записи:</div>
+              <ul>
+				<li><a href="http://nauchebe.net/2015/03/magnitnaya-pronicaemost/" title="Магнитная проницаемость">Магнитная проницаемость</a></li>
+				<li><a href="http://nauchebe.net/2015/02/kleshhi-dlya-izmereniya-sily-toka/" title="Клещи для измерения силы тока">Клещи для измерения силы тока</a></li>
+				<li><a href="http://nauchebe.net/2015/02/puskateli-dlya-elektrodvigatelej/" title="Пускатели для электродвигателей">Пускатели для электродвигателей</a></li>
+				<li><a href="http://nauchebe.net/2015/02/nailuchshaya-liniya-elektroperedachi/" title="Наилучшая линия электропередачи">Наилучшая линия электропередачи</a></li>
+				<li><a href="http://nauchebe.net/2015/02/o-luchshem-transformatore/" title="О лучшем трансформаторе">О лучшем трансформаторе</a></li>
+				<li><a href="http://nauchebe.net/2015/02/zolotaya-era-oscillografii/" title="Золотая эра осциллографии">Золотая эра осциллографии</a></li>
+				<li><a href="http://nauchebe.net/2015/02/universalnye-oscillografy-gruppy-s1-chast-2/" title="Универсальные осциллографы группы С1 Часть 2">Универсальные осциллографы группы С1 Часть 2</a></li>
+				<li><a href="http://nauchebe.net/2015/02/servisnye-oscillografy-chast-2/" title="Сервисные осциллографы Часть 2">Сервисные осциллографы Часть 2</a></li>
+				<li><a href="http://nauchebe.net/2015/02/put-para/" title="Путь пара">Путь пара</a></li>
+				<li><a href="http://nauchebe.net/2015/02/razvitie-kollektiva-razvitie-napravlenij-555/" title="Развитие коллектива, развитие направлений  555">Развитие коллектива, развитие направлений&nbsp; 555</a></li>
+		              </ul>
+</div>
+<div class="something">
+<div class="sb-title">Навигация по меткам:</div>
+<ul>
+  	<li>
+
+<a href="http://nauchebe.net/tag/mikrosxemy/" class="tag-link-461" title="408 topics" style="font-size: 11.012048192771pt;">микросхемы</a>
+<a href="http://nauchebe.net/tag/moshhnosti/" class="tag-link-1155" title="268 topics" style="font-size: 8.8433734939759pt;">мощности</a>
+<a href="http://nauchebe.net/tag/ustrojstvo/" class="tag-link-516" title="228 topics" style="font-size: 8pt;">Устройство</a>
+<a href="http://nauchebe.net/tag/impulsov/" class="tag-link-462" title="272 topics" style="font-size: 8.9638554216867pt;">импульсов</a>
+<a href="http://nauchebe.net/tag/pitaniya/" class="tag-link-476" title="1,117 topics" style="font-size: 16.313253012048pt;">питания</a>
+<a href="http://nauchebe.net/tag/primer/" class="tag-link-71" title="283 topics" style="font-size: 9.0843373493976pt;">пример</a>
+<a href="http://nauchebe.net/tag/priemnika/" class="tag-link-738" title="350 topics" style="font-size: 10.289156626506pt;">приемника</a>
+<a href="http://nauchebe.net/tag/provoda/" class="tag-link-399" title="258 topics" style="font-size: 8.6024096385542pt;">провода</a>
+<a href="http://nauchebe.net/tag/vitkov/" class="tag-link-799" title="365 topics" style="font-size: 10.409638554217pt;">витков</a>
+<a href="http://nauchebe.net/tag/generatora/" class="tag-link-522" title="327 topics" style="font-size: 9.9277108433735pt;">генератора</a>
+<a href="http://nauchebe.net/tag/vyxode/" class="tag-link-548" title="260 topics" style="font-size: 8.7228915662651pt;">выходе</a>
+<a href="http://nauchebe.net/tag/napryazhenie/" class="tag-link-395" title="1,246 topics" style="font-size: 16.915662650602pt;">напряжение</a>
+<a href="http://nauchebe.net/tag/napryazheniya/" class="tag-link-473" title="1,547 topics" style="font-size: 18pt;">напряжения</a>
+<a href="http://nauchebe.net/tag/nagruzki/" class="tag-link-363" title="237 topics" style="font-size: 8.2409638554217pt;">нагрузки</a>
+<a href="http://nauchebe.net/tag/radoelektronika/" class="tag-link-125" title="443 topics" style="font-size: 11.493975903614pt;">радоэлектроника</a>
+<a href="http://nauchebe.net/tag/raboty/" class="tag-link-1324" title="247 topics" style="font-size: 8.3614457831325pt;">работы</a>
+<a href="http://nauchebe.net/tag/signal/" class="tag-link-617" title="353 topics" style="font-size: 10.289156626506pt;">сигнал</a>
+<a href="http://nauchebe.net/tag/signala/" class="tag-link-448" title="647 topics" style="font-size: 13.421686746988pt;">сигнала</a>
+<a href="http://nauchebe.net/tag/signalov/" class="tag-link-521" title="278 topics" style="font-size: 9.0843373493976pt;">сигналов</a>
+<a href="http://nauchebe.net/tag/upravleniya/" class="tag-link-501" title="235 topics" style="font-size: 8.1204819277108pt;">управления</a>
+<a href="http://nauchebe.net/tag/soprotivlenie/" class="tag-link-1234" title="250 topics" style="font-size: 8.4819277108434pt;">сопротивление</a>
+<a href="http://nauchebe.net/tag/usilitel/" class="tag-link-144" title="296 topics" style="font-size: 9.3253012048193pt;">усилитель</a>
+<a href="http://nauchebe.net/tag/usilitelya/" class="tag-link-453" title="573 topics" style="font-size: 12.819277108434pt;">усилителя</a>
+<a href="http://nauchebe.net/tag/usileniya/" class="tag-link-451" title="235 topics" style="font-size: 8.1204819277108pt;">усиления</a>
+<a href="http://nauchebe.net/tag/ustrojstva/" class="tag-link-504" title="573 topics" style="font-size: 12.819277108434pt;">устройства</a>
+<a href="http://nauchebe.net/tag/sxema/" class="tag-link-9" title="545 topics" style="font-size: 12.578313253012pt;">схема</a>
+<a href="http://nauchebe.net/tag/teoriya/" class="tag-link-95" title="271 topics" style="font-size: 8.8433734939759pt;">теория</a>
+<a href="http://nauchebe.net/tag/tranzistora/" class="tag-link-524" title="529 topics" style="font-size: 12.33734939759pt;">транзистора</a>
+<a href="http://nauchebe.net/tag/tranzistorov/" class="tag-link-1059" title="248 topics" style="font-size: 8.4819277108434pt;">транзисторов</a>
+<a href="http://nauchebe.net/tag/chastoty/" class="tag-link-720" title="598 topics" style="font-size: 13.060240963855pt;">частоты</a>
+	</li>
+</ul>
+</div>
+
+
+
+
+
+
+<div class="something">
+<div class="sb-title">Свежие комментарии:</div>
+<ul>
+  	<li>
+
+<ul><li>Николай: <a href="http://nauchebe.net/2011/12/soliruyushhaya-elektrogitara-s-organnymi-tembrami/#comment-9183" title="on СОЛИРУЮЩАЯ ЭЛЕКТРОГИТАРА С ОРГАННЫМИ ТЕМБРАМИ"><span>В каком журнале и номере была опубликована эта схе...</span></a></li><li>Вячеслав: <a href="http://nauchebe.net/2012/09/sxema-lampovogo-usilitelya-moshhnosti-na-6n2p-6p43p-2-3vt/#comment-9136" title="on Схема лампового усилителя мощности на 6Н2П, 6П43П (2-3Вт)"><span>В схеме ошибка, с3 надо поменять полярность....</span></a></li><li>djongenix: <a href="http://nauchebe.net/2010/10/ekonomichnyj-impulsnyj-blok-pitaniya-2x25v-35a/#comment-9129" title="on Экономичный импульсный блок питания 2x25В 3,5А"><span>Убийца транзисторов...</span></a></li><li>Александр: <a href="http://nauchebe.net/2011/12/elektromagnitnyj-impulsnyj-generator-chast-1/#comment-9106" title="on Электромагнитный импульсный генератор - ЧАСТЬ 1"><span>Знать бы поподробней как собрать такую хрень, а то...</span></a></li><li>maks: <a href="http://nauchebe.net/2010/09/usilitel-2x25-vt-na-tda7265/#comment-9099" title="on Усилитель 2x25 Вт на TDA7265"><span>Подскажите как правильно подобрать блок питания....</span></a></li><li>Алена: <a href="http://nauchebe.net/2011/04/kak-sdelat-tonalnuju-osnovu-pod-makijazh-v-domashnih-uslovijah/#comment-9076" title="on Как сделать тональную основу под макияж в домашних условиях"><span>Где купить чистую слюда?...</span></a></li><li>Сергей: <a href="http://nauchebe.net/2012/04/kak-otremontirovat-akkumulyator-shurupoverta-v-domashnix-usloviyax/#comment-9009" title="on Как отремонтировать аккумулятор шуруповерта в домашних условиях."><span>батарею разобрал, но воды не залил - сборка не пол...</span></a></li></ul>
+	</li>
+</ul>
+</div>
+
+</div> <!-- #sidebar --></div> 
+
+
+<noindex>
+
+<div id="footer" class="clearfix">
+<p class="alignright">
+  <a href="http://nauchebe.net/2014/02/upravlenie-tiristorami-v-sxemax-na-mikrokontrollere/#home" class="top-link">Наверх</a>
+</p>
+
+<p>
+	© 2015 Техника и Программы При использовании материалов данного сайта прямая и явная ссылка на сайт <a href="http://www.nauchebe.net/">www.nauchebe.net</a> обязательна.
+</p>
+<p>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t40.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/hit" alt="" title="LiveInternet" border="0" width="31" height="31"></a><!--/LiveInternet-->
+</p>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter10604236 = new Ya.Metrika({id:10604236,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/10604236" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<p class="signet">
+  Валидно XHTML 1.0 Transitional | Валидно CSS 3</p>
+</div>
+
+<!-- Scripts -->
+<!-- platform twitter -->
+<script type="text/javascript">// <![CDATA[
+(function() {
+        var twitterScriptTag = document.createElement('script');
+        twitterScriptTag.type = 'text/javascript';
+        twitterScriptTag.async = true;
+        twitterScriptTag.src = 'http://platform.twitter.com/widgets.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(twitterScriptTag, s);
+})();
+// ]]></script>
+<!-- platform twitter -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+
+
+
+<!-- #reclama -->
+<!--noindex--><script type="text/javascript" src="http://c.am15.net/delay-loader/delay-loader.min.js?s=65010&d=5000&f=sb" class="amct"></script><!--/noindex-->
+</noindex>
+<!-- #main -->
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/form.js"></script>
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/jquery.js"></script>
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/jquery.fancybox-1.3.7.min.js"></script>
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/jquery.easing.pack.js"></script>
+<script type="text/javascript" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/jquery.mousewheel.min.js"></script>
+
+<script type="text/javascript">
+jQuery(document).on('ready post-load', easy_fancybox_handler );
+</script>
+
+
+
+<!-- Dynamic page generated in 0.675 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-03-01 15:13:59 -->
+
+<!-- super cache --><div id="fancybox-tmp" style="padding: 50px;"></div><div id="fancybox-loading" style="display: none;"><div style="top: -280px;"></div></div><div id="fancybox-overlay" style="opacity: 0.7; cursor: pointer; height: 5446px; display: block; background-color: rgb(119, 119, 119);"></div><div id="fancybox-wrap" style="display: block; width: 655px; height: auto; top: 2706px; left: 604px;"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content" style="border-width: 10px; width: 635px; height: 274px;"><img id="fancybox-img" src="http://nauchebe.net/i/a/electronics/MicroControllerCircuitsVS_image245.jpg" alt=""></div><a id="fancybox-close" style="display: block;"></a><div id="fancybox-title" style="display: none;"></div><a href="javascript:;" id="fancybox-left" style="display: none;"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right" style="display: none;"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><iframe name="oauth2relay826342876" id="oauth2relay826342876" src="./Управление тиристорами в схемах на микроконтроллере   Техника и Программы_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>
